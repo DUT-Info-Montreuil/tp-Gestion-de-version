@@ -16,50 +16,50 @@ public class QuestLine {
     public QuestLine(Joueur j){
         joueur = j;
         quetes = FXCollections.observableArrayList();
-        quetes.add(new TalkQuete("Chapitre 0 - Que veut le prof ?", "Que dois je faire ? On va jouer pendant tout le cours ?", 10, "Potion", 1, "spectre"));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "Si vous voulez jouer, il faudra d'abord suivre le TP.\n Si vous arrivez au bout, il faudra être le 1er à push le code pour obtenir le bonus ultime !!!!\n Serez vous de taille ?", 5, "Commit", 1, "vendeur"));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "'Salut à toi héros ici tu trouveras tout ce qu'il te faut, va voir le forgeron pour acheter des armes ou traiter tes minerais'\nAller parler au forgeron au sud de la ville.", 5, "Miel", 1, "upgrader"));
-        quetes.add(new LootQuete("Chapitre 1 - C'est parti pour le TP", "'Si tu veux acheter du nouveau matos c'est ici que ça se passe ! Tiens d'ailleurs, rend moi un service tu veux.'\nMiner une source de minerai à l'est.", 10, "Fer", 1, "SourceMinerai", 1));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "'Il faudrait peut-etre que je me renseigne à propos de ce livre, une fois que j'aurai amener la marchandise biensur'\nAmener les minerais au forgeron.", 40, "Fer", 3, "upgrader"));
+        quetes.add(new TalkQuete("Chapitre 0 - Les titans approchent", "Qu'est-ce que veut le commandant ? Une mission pendant l'attaque des Titans ?", 10, "Équipement tridimensionnel", 1, "Eren Yeager"));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "Si vous voulez survivre, il va falloir maîtriser votre équipement tridimensionnel et affronter les Titans. Prêt à vous battre ?", 5, "Tuer des Titans", 1, "Mikasa Ackerman"));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "'Hé là-bas, soldat ! Vous avez besoin de ravitaillement. Allez voir le logisticien pour obtenir du gaz et des lames.'\nApprovisionnez-vous au magasin.", 5, "Gaz et lames", 1, "Logisticien"));
+        quetes.add(new LootQuete("Chapitre 1 - La bataille commence", "'Nous avons besoin de ressources pour réparer nos équipements. Allez chercher du matériel dans la forêt.'\nCollectez des matériaux dans la forêt.", 10, "Bois", 1, "Forêt", 3));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "'Nous avons besoin de ces matériaux pour réparer notre équipement tridimensionnel. Apportez-les au forgeron.'\nApportez les matériaux au forgeron.", 40, "Matériaux", 3, "Forgeron"));
 
-        quetes.add(new TalkQuete("Chapitre 2 - Une recherche sans fin", "Intérroger l'habitant au centre de la ville concernant le livre de Momoku.", 10, "", 0, "villageois4"));
-        quetes.add(new TalkQuete("Chapitre 2 - Une recherche sans fin", "Intérroger l'habitant au sud-ouest de la ville concernant le livre de Momoku", 10, "", 0, "villageois2"));
-        quetes.add(new KillQuete("Chapitre 2 - Une recherche sans fin", "'Je crois bien que je peux t'aider, mais avant j'ai besoin de toi pour quelque chose !'\n Tuer 2 Slimes.", 5, "", 0, "Slime", 2));
-        quetes.add(new KillQuete("Chapitre 2 - Une recherche sans fin", "Tuer 2 Hiboux.", 5, "", 0, "Hibou", 2));
-        quetes.add(new TalkQuete("Chapitre 2 - Une recherche sans fin", "Rendre la quete au villageois au sud-ouest de la ville.", 50, "Miel", 3, "villageois2"));
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Interrogez le prisonnier au sous-sol sur les secrets des Titans.", 10, "", 0, "Prisonnier"));
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Interrogez le chercheur sur les découvertes récentes concernant les Titans.", 10, "", 0, "Chercheur"));
+        quetes.add(new KillQuete("Chapitre 2 - Mystères des Titans", "'Je peux vous révéler des informations sur les Titans, mais d'abord, tuez 2 Titans errants.'\nTuez 2 Titans errants.", 5, "", 0, "Titan errant", 2));
+        quetes.add(new KillQuete("Chapitre 2 - Mystères des Titans", "Tuez 2 Titans anormaux.", 5, "", 0, "Titan anormal", 2));
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Rapportez les informations aux chercheurs.", 50, "Rapport", 3, "Chercheur"));
 
-        quetes.add(new TalkQuete("Chapitre 3 - Injustice", "'Je t'ai bien eu héros, personne ne connaît ce livre laisse tomber !'\nAller parler au maitre du Dojo pour en savoir reellement plus sur le livre de Momoku.", 5, "Niveau", 1, "master"));
-        quetes.add(new KillQuete("Chapitre 3 - Injustice", "'Je ne sais pas si tu es a la hauteur pour recevoir ce genre de conaissance, prouve moi ta force avant cela !'\nTuer 2 reptiles au nord.", 5, "", 0, "Reptile", 2));
-        quetes.add(new TalkQuete("Chapitre 3 - Injustice", "Retourner voir le maitre du Dojo.", 100, "Viande", 3, "master"));
-        quetes.add(new KillQuete("Chapitre 3 - Injustice", "'Vous les avez tue !? Vous etes anormalement rapide ! Dans ce cas allez vous occuper des bambous vivants !!'\nTuer 3 bambous vivants au nord.", 10, "", 0, "Bambou", 3));
-        quetes.add(new TalkQuete("Chapitre 3 - Injustice", "Retourner voir le maitre du Dojo.", 150, "Potion", 2, "master"));
-        quetes.add(new LootQuete("Chapitre 3 - Injustice", "'Donc vous n'etes pas un menteur, votre tenue semble abimee. Allez me chercher quelque chose pour que je la répare.'\nMiner 3 sources de minerai.", 10, "", 0, "SourceMinerai", 3));
-        quetes.add(new TalkQuete("Chapitre 3 - Injustice", "Retourner voir le maitre du Dojo.", 200, "Niveau", 1, "master"));
+        quetes.add(new TalkQuete("Chapitre 3 - Confrontation avec le Titan colossal", "'Nous devons découvrir la vérité derrière le Titan colossal. Interrogez le commandant sur notre prochaine mission.'", 5, "Mission spéciale", 1, "Commandant Erwin"));
+        quetes.add(new KillQuete("Chapitre 3 - Confrontation avec le Titan colossal", "'Pour prouver votre valeur, tuez 2 Titans blindés au nord.'\nTuez 2 Titans blindés.", 5, "", 0, "Titan blindé", 2));
+        quetes.add(new TalkQuete("Chapitre 3 - Confrontation avec le Titan colossal", "Rapportez au commandant après avoir éliminé les Titans blindés.", 100, "Rapport de mission", 3, "Commandant Erwin"));
+        quetes.add(new KillQuete("Chapitre 3 - Confrontation avec le Titan colossal", "'Les Titans blindés sont vaincus ? Impressionnant. Maintenant, éliminez 3 Titans colossaux pour assurer notre survie.'\nTuez 3 Titans colossaux.", 10, "", 0, "Titan colossal", 3));
+        quetes.add(new TalkQuete("Chapitre 3 - Confrontation avec le Titan colossal", "Rapportez au commandant après avoir éliminé les Titans colossaux.", 150, "Rapport de mission", 2, "Commandant Erwin"));
+        quetes.add(new LootQuete("Chapitre 3 - Confrontation avec le Titan colossal", "'Nos équipements sont endommagés. Obtenez des matériaux pour les réparer.'\nCollectez 3 matériaux de réparation.", 10, "", 0, "Matériaux de réparation", 3));
+        quetes.add(new TalkQuete("Chapitre 3 - Confrontation avec le Titan colossal", "Rapportez les matériaux de réparation au commandant.", 200, "Matériaux de réparation", 1, "Commandant Erwin"));
 
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "'Un vieil ami se bat à la frontiere sud pour repousser les assaillants, je pense que vous êtes prets a en savoir plus.'\nAller à la rencontre du moine au sud.", 5, "0", 0, "moine"));
-        quetes.add(new KillQuete("Chapitre 4 - Le chemin d'un heros", "'Vite heros, tuez les deux yeux à l'entrée de l'avant poste !!'\nTuer 2 yeux vivants.", 10, "", 0, "Oeil", 2));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "Retourner voir le moine.", 50, "Potion", 1, "moine"));
-        quetes.add(new LootQuete("Chapitre 4 - Le chemin d'un heros", "'C'est le maitre du Dojo qui vous envoie je suppose, vous savez vous battre ça se voit. Les defenses commencent à faiblir vous allez m'aider à reconstruir ces barricades. J'ai quelque chose pour vous si vous m'aidez.'\nCouper 4 buches de bois.", 15, "", 0, "SourceBois", 4));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "Retourner voir le moine.", 50, "Shuriken", 1, "moine"));
-        quetes.add(new KillQuete("Chapitre 4 - Le chemin d'un heros", "'Vous semblez honnête héros, je sens que vous êtes quelqu'un de confiance. Prenez ces shurikens, si c'est le livre que vous cherchez, il va falloir se battre.'\nTuer 3 betes.", 10, "", 0, "Bete", 3));
-        quetes.add(new KillQuete("Chapitre 4 - Le chemin d'un heros", "Tuer 3 yeux vivants.", 10, "", 0, "Oeil", 3));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "Retourner voir le moine.", 200, "Potion", 3, "moine"));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "'Vous les avez tués ? Parfait, j'ai reussi à renforcer les barricades. Continuez d'explorer le marais, vous trouverez surement quelque chose au sud !'\nExplorer le sud du marais et trouver des informations.", 10, "", 0, "goldninja"));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "'J'ai reussi, j'ai le livre de Momoku !! Je devrai rentrer, je ne me sens pas bien ici...'\nRetourner voir le moine.", 100, "Viande", 2, "moine"));
-        quetes.add(new TalkQuete("Chapitre 4 - Le chemin d'un heros", "'Je n'arrive pas à y croire ! Vous l'avez !! Vous avez le livre de Momoku je le sens ! Il faut prevenir le maitre du Dojo de suite !!!'\nRetourner voir le maitre du Dojo.", 30, "Niveau", 1, "master"));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "'Un groupe de Titans se dirige vers le mur. Rendez-vous à l'extérieur et aidez-nous à les arrêter.'\nRejoignez le groupe de combat au mur.", 5, "0", 0, "Chef d'escouade"));
+        quetes.add(new KillQuete("Chapitre 4 - Au-delà du mur", "'Tuez les deux Titans aux portes du poste avancé !'\nTuez 2 Titans aux portes du poste avancé.", 10, "", 0, "Titan", 2));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "Rapportez au chef d'escouade après avoir sécurisé le poste avancé.", 50, "Ravitaillement", 1, "Chef d'escouade"));
+        quetes.add(new LootQuete("Chapitre 4 - Au-delà du mur", "'Notre défense a besoin de renforts. Coupez 4 bûches pour réparer les barricades.'\nCoupez 4 bûches.", 15, "", 0, "Bûches", 4));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "Rapportez les bûches au chef d'escouade.", 50, "Ravitaillement", 1, "Chef d'escouade"));
+        quetes.add(new KillQuete("Chapitre 4 - Au-delà du mur", "'Tuez 3 Titans enragés qui menacent notre position.'\nTuez 3 Titans enragés.", 10, "", 0, "Titan enragé", 3));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "Rapportez au chef d'escouade après avoir éliminé les Titans enragés.", 200, "Ravitaillement", 3, "Chef d'escouade"));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "'Vous avez tenu bon ! Mais il y a plus à découvrir à l'ouest du mur. Continuez d'explorer.'\nExplorez l'ouest du mur pour obtenir des informations.", 10, "", 0, "Éclaireur"));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "'J'ai trouvé le livre de l'histoire ancienne ! Je dois le ramener. Retournez au mur.'\nRapportez le livre de l'histoire ancienne.", 100, "Livre de l'histoire ancienne", 2, "Éclaireur"));
+        quetes.add(new TalkQuete("Chapitre 4 - Au-delà du mur", "'Vous avez le livre de l'histoire ancienne ! C'est incroyable ! Le commandant doit être informé.'\nRapportez au commandant après avoir trouvé le livre de l'histoire ancienne.", 30, "Rapport de mission", 1, "Commandant Erwin"));
 
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'Vous l'avez... Vous l'avez obtenu heros, laissez moi le toucher.'\n*Le maitre passe son doigt sur le livre...*\n'La naissance du monde a été privé d'un sens primordial !? Comment est-ce possible !?'\nDiscuter avec le maitre.", 30, "", 0, "master"));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'J'ai toujours su que quelque chose n'allais pas, il nous manque quelque chose. Quelque chose de très important. Tout ca a surement un rapport avec les hallucinations à l'ouest vous devriez y jeter un coup d'oeil.'\nSe rendre a l'ouest et enquêter.", 30, "", 0, "cavegirl"));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "Discuter avec la fille aux cheveux sales.", 30, "", 0, "cavegirl"));
-        quetes.add(new KillQuete("Chapitre 5 - Hallucination collective", "'J'aurai jamais cru demander de l'aide à quelqu'un de puant que vous, mais je n'ai pas le choix... Les bambous commencent a envahir mon espace vital !'\nTuer 2 bambous vivants.", 10, "", 0, "Bambou", 2));
-        quetes.add(new KillQuete("Chapitre 5 - Hallucination collective", "'Qu'est ce que c'est que ce monument ? Personne n'a remarque ca ? Je vais tenter de degager la zone et d'en parler à la fille.'\nTuer 2 reptiles au nord de la maison de la fille.", 10, "", 0, "Reptile", 2));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "Retourner voir la fille aux cheveux sales.", 200, "Nouilles", 3, "cavegirl"));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'Un monument ? Quoi, au dessus ? Un pont ? Je me disais bien que vous aviez un problème vous, en tout cas merci de votre aide quand meme. Vous devriez peut etre vous faire soigner...'\nRetourner voir le maitre du dojo.", 30, "Niveau", 1, "master"));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'Un monument a l'ouest ? Mais oui biensur ! Seul le proprietaire du livre de Momoku ressent ce qu'autrui ignore! Vous êtes l'elu !!'\nDiscuter avec le maitre du dojo.", 30, "", 0, "master"));
-        quetes.add(new KillQuete("Chapitre 5 - Hallucination collective", "'Il est temps pour vous de sauver ce monde, entrez dans le monument ! Prenez le portail devant ce dernier a l'ouest. Bonne chance héros...'\nTuer l'esprit malveillant dans le cauchemar.", 10, "Niveau", 1, "EnnemiBoss", 1));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'Je devrai sortir de là au plus vite!'\nAller parler au spectre du cauchemar.", 30, "", 0, "spectre"));
-        quetes.add(new TalkQuete("Chapitre 5 - Hallucination collective", "'Heros, vous avez sauvé ce monde du cauchemar. L'humanite a retrouvé ce qu'on lui a volé. La vision. Vous avez redonné vie à ce monde. Merci.'\nRemercier le spectre.", 1000, "Niveau", 1, "spectre"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'Vous avez le livre de l'histoire ancienne... Laissez-moi le toucher.'\n*Le commandant examine le livre...*\n'Le monde a caché un sens primordial à la naissance... Comment est-ce possible ?'\nDiscutez avec le commandant.", 30, "", 0, "Commandant Erwin"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'J'ai toujours senti qu'il manquait quelque chose. Quelque chose d'essentiel. Tout cela doit être lié aux visions à l'ouest. Allez enquêter.'\nDirigez-vous vers l'ouest et menez une enquête.", 30, "", 0, "Éclaireur"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "Parlez à la fille aux cheveux sales.", 30, "", 0, "Fille aux cheveux sales"));
+        quetes.add(new KillQuete("Chapitre 5 - Révélation sur les Titans", "'Je n'aurais jamais pensé demander de l'aide à quelqu'un comme vous, mais je n'ai pas le choix... Les Titans commencent à envahir mon espace !'\nTuez 2 Titans enragés.", 10, "", 0, "Titan enragé", 2));
+        quetes.add(new KillQuete("Chapitre 5 - Révélation sur les Titans", "'Qu'est-ce que c'est que ce monument ? Personne n'a remarqué ça ? Je vais essayer de dégager la zone et en parler à la fille.'\nTuez 2 Titans anormaux au nord de la maison de la fille.", 10, "", 0, "Titan anormal", 2));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "Retournez voir la fille aux cheveux sales.", 200, "Nourriture", 3, "Fille aux cheveux sales"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'Un monument à l'ouest ? Bien sûr ! Seul le détenteur du livre de l'histoire ancienne ressent ce que les autres ignorent ! Vous êtes l'élu !'\nDiscutez avec le commandant après avoir découvert le monument.", 30, "", 0, "Commandant Erwin"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'Il est temps de sauver ce monde. Entrez dans le monument ! Prenez le portail à l'ouest de celui-ci. Bonne chance, héros...'\nTuez l'esprit maléfique dans le cauchemar.", 10, "Niveau", 1, "Esprit maléfique"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'Je dois sortir d'ici au plus vite !'\nAllez parler à l'esprit du cauchemar.", 30, "", 0, "Esprit du cauchemar"));
+        quetes.add(new TalkQuete("Chapitre 5 - Révélation sur les Titans", "'Héros, vous avez sauvé ce monde du cauchemar. L'humanité a retrouvé ce qui lui avait été volé. La vision. Vous avez redonné vie à ce monde. Merci.'\nRemerciez l'esprit.", 1000, "Niveau", 1, "Esprit"));
+
     }
+
 
     public ObservableList<Quete> getQuetes() {
         return quetes;
