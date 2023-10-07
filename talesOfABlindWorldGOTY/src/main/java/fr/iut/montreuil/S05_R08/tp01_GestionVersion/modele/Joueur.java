@@ -22,13 +22,14 @@ public class Joueur {
     private Console console;
     private IntegerProperty xProperty = new SimpleIntegerProperty(0);
     private IntegerProperty yProperty = new SimpleIntegerProperty(0);
-    private static int vitesseDeDeplacement = 2 ;
+    private static int vitesseDeDeplacement = 1 ;
     private StringProperty direction = new SimpleStringProperty();
     private Terrain zone;
     private Inventaire inventaire;
     private IntegerProperty maxHP = new SimpleIntegerProperty();
     private IntegerProperty niveau;
     private QuestLine listeQuetes;
+    private int compteurPas;
 
     public Joueur(int x, int y, Terrain zone) {
         arme = new Gourdin(); // Le joueur commence avec un gourdin
@@ -42,6 +43,7 @@ public class Joueur {
         niveau = new SimpleIntegerProperty(1);
         this.inventaire = new Inventaire();
         this.listeQuetes = new QuestLine(this);
+        this.compteurPas = 0;
     }
 
     public ArmeDistance getArmeDistance() {
@@ -54,6 +56,10 @@ public class Joueur {
 
     public int getNiveau() {
         return niveau.getValue();
+    }
+
+    public int getCompteurPas() {
+        return compteurPas;
     }
 
     public void lvlUp(){
@@ -139,24 +145,31 @@ public class Joueur {
 
     public Inventaire getInventaire() { return this.inventaire; }
 
+    public void incrementerpasJoueur(){
+        this.compteurPas++;
+    }
     public void moveUp () {
         this.yProperty.setValue(this.yProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("up");
+        this.incrementerpasJoueur();
     }
 
     public void moveDown () {
         this.yProperty.setValue(this.yProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("down");
+        this.incrementerpasJoueur();
     }
 
     public void moveRight () {
         this.xProperty.setValue(this.xProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("right");
+        this.incrementerpasJoueur();
     }
 
     public void moveLeft () {
         this.xProperty.setValue(this.xProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("left");
+        this.incrementerpasJoueur();
     }
 
     public QuestLine getListeQuetes() {

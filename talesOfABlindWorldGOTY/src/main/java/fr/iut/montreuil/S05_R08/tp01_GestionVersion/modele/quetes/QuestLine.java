@@ -16,11 +16,17 @@ public class QuestLine {
     public QuestLine(Joueur j){
         joueur = j;
         quetes = FXCollections.observableArrayList();
-        quetes.add(new TalkQuete("Chapitre 0 - Que veut le prof ?", "Que dois je faire ? On va jouer pendant tout le cours ?", 10, "Potion", 1, "spectre"));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "Si vous voulez jouer, il faudra d'abord suivre le TP.\n Si vous arrivez au bout, il faudra être le 1er à push le code pour obtenir le bonus ultime !!!!\n Serez vous de taille ?", 5, "Commit", 1, "vendeur"));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "'Salut à toi héros ici tu trouveras tout ce qu'il te faut, va voir le forgeron pour acheter des armes ou traiter tes minerais'\nAller parler au forgeron au sud de la ville.", 5, "Miel", 1, "upgrader"));
-        quetes.add(new LootQuete("Chapitre 1 - C'est parti pour le TP", "'Si tu veux acheter du nouveau matos c'est ici que ça se passe ! Tiens d'ailleurs, rend moi un service tu veux.'\nMiner une source de minerai à l'est.", 10, "Fer", 1, "SourceMinerai", 1));
-        quetes.add(new TalkQuete("Chapitre 1 - C'est parti pour le TP", "'Il faudrait peut-etre que je me renseigne à propos de ce livre, une fois que j'aurai amener la marchandise biensur'\nAmener les minerais au forgeron.", 40, "Fer", 3, "upgrader"));
+        quetes.add(new TalkQuete("Chapitre 0 - Les titans approchent", "Qu'est-ce que veut le commandant ? Une mission pendant l'attaque des Titans ?", 10, "Équipement tridimensionnel", 1, "panneau"));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "Si vous voulez survivre, il va falloir maîtriser votre équipement tridimensionnel et affronter les Titans. Prêt à vous battre ?", 5, "Tuer des Titans", 1, "Mikasa Ackerman"));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "'Hé là-bas, soldat ! Vous avez besoin de ravitaillement. Allez voir le logisticien pour obtenir du gaz et des lames.'\nApprovisionnez-vous au magasin.", 5, "Gaz et lames", 1, "Logisticien"));
+        quetes.add(new LootQuete("Chapitre 1 - La bataille commence", "'Nous avons besoin de ressources pour réparer nos équipements. Allez chercher du matériel dans la forêt.'\nCollectez des matériaux dans la forêt.", 10, "Bois", 1, "Forêt", 3));
+        quetes.add(new TalkQuete("Chapitre 1 - La bataille commence", "'Nous avons besoin de ces matériaux pour réparer notre équipement tridimensionnel. Apportez-les au forgeron.'\nApportez les matériaux au forgeron.", 40, "Matériaux", 3, "Forgeron"));
+
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Interrogez le prisonnier au sous-sol sur les secrets des Titans.", 10, "", 0, "Prisonnier"));
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Interrogez le chercheur sur les découvertes récentes concernant les Titans.", 10, "", 0, "Chercheur"));
+        quetes.add(new KillQuete("Chapitre 2 - Mystères des Titans", "'Je peux vous révéler des informations sur les Titans, mais d'abord, tuez 2 Titans errants.'\nTuez 2 Titans errants.", 5, "", 0, "Titan errant", 2));
+        quetes.add(new KillQuete("Chapitre 2 - Mystères des Titans", "Tuez 2 Titans anormaux.", 5, "", 0, "Titan anormal", 2));
+        quetes.add(new TalkQuete("Chapitre 2 - Mystères des Titans", "Rapportez les informations aux chercheurs.", 50, "Rapport", 3, "Chercheur"));
 
         quetes.add(new TalkQuete("Chapitre 2 - Une recherche sans fin", "Intérroger l'habitant au centre de la ville concernant le livre de Momoku.", 10, "", 0, "villageois4"));
         quetes.add(new TalkQuete("Chapitre 2 - Une recherche sans fin", "Intérroger l'habitant au sud-ouest de la ville concernant le livre de Momoku", 10, "", 0, "villageois2"));
